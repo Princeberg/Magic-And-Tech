@@ -43,4 +43,24 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    
+    let index = 0;
+    const slides = document.querySelectorAll('.gallery-image');
+
+    function showImage(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === n) slide.classList.add('active');
+      });
+    }
+
+    function nextImage() {
+      index = (index + 1) % slides.length;
+      showImage(index);
+    }
+
+    function prevImage() {
+      index = (index - 1 + slides.length) % slides.length;
+      showImage(index);
+    }
+
+    setInterval(nextImage, 3000);

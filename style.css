@@ -91,7 +91,6 @@ section {
 
 .hero {
   text-align: center;
-  margin-top: 60px; 
   padding-top: 100px;
   padding-bottom: 80px;
 }
@@ -240,3 +239,41 @@ section {
     padding: 40px 10px;
   }
 }
+.gallery-container {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gallery-image {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .gallery-image.active {
+    display: block;
+  }
+
+  .gallery-controls {
+    margin-top: 10px;
+  }
+
+  .gallery-controls button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .service-price {
+    margin-top: 8px;
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #333;
+  }
