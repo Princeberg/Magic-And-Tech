@@ -3,142 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Magic & Tech </title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <title>Magic & Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
   <link rel="icon" type="image/x-icon" href="images/logo.png">  
-  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
   <canvas id="bg"></canvas>
   <header>
-    <div class="logo"> Magic & Tech <img src="images/logo2.png" width="60px" height="auto"> </div> 
+    <a href="#" class="logo"> 
+      Magic & Tech 
+      <img src="images/logo2.png" width="50" height="50" alt="Logo Magic & Tech">
+    </a> 
     <nav>
       <a href="#services">Services</a>
       <a href="#portfolio">Réalisations</a>
+      <a href="#stats">Chiffres</a>
       <a href="#contact">Contacts</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Design. Communication. Technologie.</h1>
-    <p>Magic & Tech est une startup spécialisée en Graphic Design, Communication, Projets IT et Social Media Marketing.</p>
+    <h1>Design. Communication. Tech.</h1>
+    <p>Magic & Tech est une startup spécialisée en Graphic Design, Communication, Web DEV et Social Media Marketing.</p>
   </section>
 
-<section id="services">
+  <section id="services">
     <h2 style="text-align:center">Nos Services</h2>
     <div class="cards">
       <div class="card">
-        <i class="fas fa-paint-brush fa-3x"></i><br>
+        <i class="fas fa-paint-brush"></i>
         <strong>Graphic Design</strong>
-        <div class="service-price">À partir de 800 RUB </div>
+        <p>Créations visuelles uniques pour votre identité de marque, logos, affiches et supports print/digitaux.</p>
       </div>
       <div class="card">
-        <i class="fas fa-bullhorn fa-3x"></i><br>
+        <i class="fas fa-bullhorn"></i>
         <strong>Communication Digitale</strong>
-        <div class="service-price">À partir de 2.500 RUB </div>
+        <p>Stratégies de communication sur mesure pour maximiser votre visibilité en ligne.</p>
       </div>
       <div class="card">
-        <i class="fas fa-laptop-code fa-3x"></i><br>
-        <strong>Gestion de Projets IT</strong>
-        <div class="service-price">À partir de 10.000 RUB </div>
+        <i class="fas fa-laptop-code"></i>
+        <strong>Développement Web</strong>
+        <p>Sites web performants et adaptatifs, conçus pour répondre à vos besoins spécifiques.</p>
       </div>
       <div class="card">
-        <i class="fas fa-share-alt fa-3x"></i><br>
+        <i class="fas fa-object-group"></i>
+        <strong>Web Design</strong>
+        <p>Interfaces utilisateur intuitives et esthétiques pour une expérience utilisateur optimale.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-share-alt"></i>
         <strong>Social Media Marketing</strong>
-        <div class="service-price">À partir de 3.000 RUB </div>
+        <p>Gestion et optimisation de vos réseaux sociaux pour accroître votre audience et engagement.</p>
       </div>
     </div>
   </section>
 
   <section id="portfolio">
-    <h2 style="text-align:center; margin-bottom: 20px;">Nos récentes réalisations</h2>
+    <h2 style="text-align:center">Nos récentes réalisations</h2>
     <div class="gallery-container">
       <div class="gallery-image active">
-        <img src="images/BZ.jpg" width="300" height="300"  alt="BZ">
+        <img src="images/BZ.jpg" alt="BZ">
         <p>Logo et Communication de Bazar Girl's Russie</p>
-        <a href="https://www.instagram.com/bazargirls_russie?igsh=ZHU1OGZiOWVzdjc2" style="color:white;">Visitez la page</a>
+        <a href="https://www.instagram.com/bazargirls_russie?igsh=ZHU1OGZiOWVzdjc2" target="_blank">Visitez la page</a>
       </div>
       <div class="gallery-image">
-        <img src="images/FDG.jpg" width="300" height="300" alt="FDG">
+        <img src="images/FDG.jpg" alt="FDG">
         <p>Communication du Festival de Grillade 1 et 2</p>
       </div>
       <div class="gallery-image">
-        <img src="images/SA.png" width="300" height="300" alt="SA">
+        <img src="images/SA.png" alt="SA">
         <p>Communication de l'événement Солнце Африки на Дону</p>
       </div>
       <div class="gallery-image">
-        <img src="images/GB.png" width="300" height="300" alt="GB">
+        <img src="images/GB.png" alt="GB">
         <p>Communication de GBATA FANZONE CAN 2023</p>
       </div>
       <div class="gallery-image">
-        <img src="images/ST.jpg" width="300" height="300" alt="ST">
+        <img src="images/ST.jpg" alt="ST">
         <p>Plateforme de MarketPlace SOMBA-TEKA</p>
-        <a href="https://somba-teka.netlify.app/" style="color:white;">Visitez le site</a>
+        <a href="https://somba-teka.netlify.app/" target="_blank">Visitez le site</a>
       </div>
       <div class="gallery-image">
-        <img src="images/ST.jpg" width="300" height="300" alt="ST RS">
+        <img src="images/ST.jpg" alt="ST RS">
         <p>Logo et Contenu réseaux sociaux pour SOMBA-TEKA</p>
-        <a href="https://www.instagram.com/somba_tekaofficiel?igsh=MTRkcnk0YmJ4ZjFwaw==" style="color:white;">Visitez la page</a>
+        <a href="https://www.instagram.com/somba_tekaofficiel?igsh=MTRkcnk0YmJ4ZjFwaw==" target="_blank">Visitez la page</a>
       </div>
       <div class="gallery-image">
-        <img src="images/KB.jpg" width="300" height="300" alt="KB">
+        <img src="images/KB.jpg" alt="KB">
         <p>Logo Kabran BuyMore</p>
       </div>
       <div class="gallery-image">
-        <img src="images/S.jpg" width="300" height="300" alt="S">
+        <img src="images/S.jpg" alt="S">
         <p>Logo SAMATY Group</p>
       </div>
       <div class="gallery-image">
-        <img src="images/DE.png" width="300" height="300" alt="DE">
+        <img src="images/DE.png" alt="DE">
         <p>Logo Del-Dora Couture</p>
       </div>
       <div class="gallery-image">
-        <img src="images/NCS.png" width="300" height="300" alt="NCS">
+        <img src="images/NCS.png" alt="NCS">
         <p>Logo Nold Communications et Services</p>
       </div>
       <div class="gallery-image">
-        <img src="images/E.jpg" width="300" height="300" alt="E">
+        <img src="images/E.jpg" alt="E">
         <p>Logo Elengi</p>
       </div>
       <div class="gallery-image">
-        <img src="images/G.jpg" width="300" height="300" height="auto" alt="G">
+        <img src="images/G.jpg" alt="G">
         <p>Logo Gorgeous Styles Beauty</p>
       </div>
       <div class="gallery-image">
-        <img src="images/ZB.jpg" width="250" height="300" alt="ZB">
+        <img src="images/ZB.jpg" alt="ZB">
         <p>Logo et Réseaux Zanzibar Lounge Bar</p>
-        <a href="https://www.instagram.com/thezanzibar_rostov?igsh=c2JybWdsMnY1cjl6/" style="color:white;">Visitez la page</a>
+        <a href="https://www.instagram.com/thezanzibar_rostov?igsh=c2JybWdsMnY1cjl6/" target="_blank">Visitez la page</a>
       </div>
 
       <div class="gallery-controls">
-        <button onclick="prevImage()">← Précédent</button>
-        <button onclick="nextImage()">Suivant →</button>
+        <button onclick="prevImage()"><i class="fas fa-arrow-left"></i> Précédent</button>
+        <button onclick="nextImage()">Suivant <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2 style="text-align:center">Nos Chiffres Clés</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-paint-brush"></i>
+        <strong>100+</strong>
+        <p>Projets en Graphic Design réalisés</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <strong>20+</strong>
+        <p>Événements et Festivals promus</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <strong>5+</strong>
+        <p>Sites Web Professionnels créés</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-share-alt"></i>
+        <strong>10+</strong>
+        <p>Comptes Business managés</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2 style="text-align:center">Contacts</h2>
+    <h2 style="text-align:center">Contactez-nous</h2>
+    <p style="text-align:center; max-width: 600px; margin: 0 auto 40px; color: #aaa;">
+      Prêt à donner vie à votre projet? Contactez-nous dès aujourd'hui pour discuter de comment nous pouvons vous aider à atteindre vos objectifs.
+    </p>
     <div class="contact-icons">
-      <a href="https://t.me/princeberg_smith" title="Email">
+      <a href="https://t.me/princeberg_smith" title="Telegram" target="_blank">
         <i class="fab fa-telegram"></i>
       </a>
-      <a href="https://wa.me/89604663774" title="Téléphone">
+      <a href="https://wa.me/89604663774" title="WhatsApp" target="_blank">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a href="https://www.instagram.com/magic_tech023?igsh=Y2g0cjN5Z3RwYmM5" target="_blank" title="Instagram">
+      <a href="https://www.instagram.com/magic_tech023?igsh=Y2g0cjN5Z3RwYmM5" title="Instagram" target="_blank">
         <i class="fab fa-instagram"></i>
       </a>
     </div>
   </section>
 
   <footer class="footer">
-    &copy; 2025 Magic & Tech. Tous droits réservés.
+    &copy; 2025 Magic & Tech 
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="script.js"> </script>
+  <script src="script.js">
+  </script>
 </body>
 </html>
