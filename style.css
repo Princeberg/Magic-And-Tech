@@ -134,7 +134,9 @@
     .hero {
       text-align: center;
       padding: 180px 20px 120px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+      margin-top: 50px;
+
       position: relative;
     }
 
