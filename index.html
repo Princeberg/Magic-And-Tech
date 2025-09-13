@@ -3,188 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic & Tech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-  <link rel="icon" type="image/x-icon" href="images/logo.png">  
+  <title>Magic & Tech - Startup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 </head>
 <body>
-  <canvas id="bg"></canvas>
+  <!-- Canvas for background animation -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Header -->
   <header>
-    <a href="#" class="logo"> 
-      Magic & Tech 
-      <img src="images/logo2.png" width="50" height="50" alt="Logo Magic & Tech">
-    </a> 
+    <a href="index.html" class="logo"><img src="images/logo2.png" width="100" alt="Logo"></a>
     <nav>
       <a href="#services">Services</a>
-      <a href="#portfolio">Réalisations</a>
+      <a href="#process">Procéssus</a>
       <a href="#stats">Chiffres</a>
       <a href="#contact">Contacts</a>
+      <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Design. Communication. Tech.</h1>
-    <p>Magic & Tech est une startup spécialisée en Graphic Design, Communication, IT Project et Social Media Marketing.</p>
-  </section>
-
-  <section id="services">
-    <h2 style="text-align:center">Nos Services</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-paint-brush"></i>
-        <strong>Graphic Design</strong>
-        <p>Créations visuelles uniques pour votre identité de marque, logos, affiches et supports print/digitaux.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-bullhorn"></i>
-        <strong>Communication Digitale</strong>
-        <p>Stratégies de communication sur mesure pour maximiser votre visibilité en ligne.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-laptop-code"></i>
-        <strong>IT Project & Support </strong>
-        <p>Sites web, PWA, automatisation des systèmes et Desktop App adaptatifs, conçus pour répondre à vos besoins spécifiques.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-object-group"></i>
-        <strong>Web Design</strong>
-        <p>Interfaces utilisateur intuitives et esthétiques pour une expérience utilisateur optimale.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-share-alt"></i>
-        <strong>Social Media Marketing</strong>
-        <p>Gestion et optimisation de vos réseaux sociaux pour accroître votre audience et engagement.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <h2 style="text-align:center">Ils nous ont fait confiance</h2>
-    <div class="gallery-container">
-      <div class="gallery-image active">
-        <img src="images/BZ.jpg" alt="BZ">
-        <p>Logo Bazar Girl's Russie</p>
-        <a href="https://www.instagram.com/bazargirls_russie?igsh=ZHU1OGZiOWVzdjc2" target="_blank">Visitez la page</a>
-      </div>
-      <div class="gallery-image active">
-        <img src="images/AT.jpg" alt="PR">
-        <p>Rebranding du Logo Attiéké Russie </p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/FDG.jpg" alt="FDG">
-        <p>Communication digitale du Festival de Grillade 1 et 2</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/SA.png" alt="SA">
-        <p>Communication de l'événement Солнце Африки на Дону</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/GB.png" alt="GB">
-        <p>Communication de GBATA FANZONE CAN 2023</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/ST.jpg" alt="ST">
-        <p> Application Web Progressive SOMBA-TEKA | Marketplace au Congo-Brazzaville</p>
-        <a href="https://somba-teka.netlify.app/" target="_blank">Téléchargez l'application</a>
-      </div>
-      <div class="gallery-image">
-        <img src="images/ST.jpg" alt="ST RS">
-        <p>Logo et Contenu réseaux sociaux pour SOMBA-TEKA</p>
-        <a href="https://www.instagram.com/somba_tekaofficiel?igsh=MTRkcnk0YmJ4ZjFwaw==" target="_blank">Visitez la page</a>
-      </div>
-      <div class="gallery-image">
-        <img src="images/KB.jpg" alt="KB">
-        <p>Logo Kabran BuyMore</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/S.jpg" alt="S">
-        <p>Logo SAMATY Group</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/DE.png" alt="DE">
-        <p>Logo Del-Dora Couture</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/DR.jpg" alt="DE">
-        <p>Logo "Les Délices de Réckiat" </p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/NCS.png" alt="NCS">
-        <p>Logo Nold Communications et Services</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/E.jpg" alt="E">
-        <p>Logo Elengi</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/G.jpg" alt="G">
-        <p>Logo Gorgeous Styles Beauty</p>
-      </div>
-      <div class="gallery-image">
-        <img src="images/ZB.jpg" alt="ZB">
-        <p>Logo Zanzibar Lounge Bar</p>
-      </div>
-
-      <div class="gallery-controls">
-        <button onclick="prevImage()"><i class="fas fa-arrow-left"></i> Précédent</button>
-        <button onclick="nextImage()">Suivant <i class="fas fa-arrow-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <section id="stats">
-    <h2 style="text-align:center">Nos Chiffres Clés</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-paint-brush"></i>
-        <strong>200+</strong>
-        <p>Projets en Graphic Design réalisés</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-bullhorn"></i>
-        <strong>20+</strong>
-        <p>Événements et Festivals promus</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-laptop-code"></i>
-        <strong>10+</strong>
-        <p>IT Project realisés </p>
-      </div>
-      <div class="card">
-        <i class="fas fa-share-alt"></i>
-        <strong>10+</strong>
-        <p>Comptes Business managés</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align:center">Contactez-nous</h2>
-    <p style="text-align:center; max-width: 600px; margin: 0 auto 40px; color: #aaa;">
-      Prêt à donner vie à votre projet? Contactez-nous dès aujourd'hui pour discuter de comment nous pouvons vous aider à atteindre vos objectifs.
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <h1 class="floating-3d">Design. Communication. Tech.</h1>
+    <p>
+      Magic & Tech est une startup spécialisée en Graphic Design, Communication, IT Project et Social Media Marketing.  
+      Nous aidons les entreprises et particuliers à construire leur identité visuelle, développer leur présence digitale et réaliser leurs projets technologiques.
     </p>
-    <div class="contact-icons">
-      <a href="https://t.me/princeberg_smith" title="Telegram" target="_blank">
-        <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://wa.me/89604663774" title="WhatsApp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.instagram.com/magic_tech023?igsh=Y2g0cjN5Z3RwYmM5" title="Instagram" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
+    <a href="#contact" class="btn floating-3d">Demander un devis</a>
+  </section>
+
+  <!-- Services -->
+  <section id="services" data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <div class="cards">
+      <div class="card floating-3d"><i class="fas fa-paint-brush"></i><strong>Graphic Design</strong><p>Identités visuelles, logos, supports print & digitaux.</p></div>
+      <div class="card floating-3d"><i class="fas fa-bullhorn"></i><strong>Communication Digitale</strong><p>Stratégies et campagnes pour maximiser votre visibilité.</p></div>
+      <div class="card floating-3d"><i class="fas fa-laptop-code"></i><strong>IT Project & Support</strong><p>Sites web, PWA, automatisations et applications desktop.</p></div>
+      <div class="card floating-3d"><i class="fas fa-object-group"></i><strong>Web Design</strong><p>Interfaces modernes et intuitives pour une meilleure UX.</p></div>
+      <div class="card floating-3d"><i class="fas fa-share-alt"></i><strong>Social Media Marketing</strong><p>Gestion et optimisation de vos réseaux sociaux.</p></div>
     </div>
   </section>
 
-  <footer class="footer">
-    &copy; 2025 Magic & Tech 
-  </footer>
+  <!-- Process Section -->
+  <section id="process" data-aos="fade-up">
+    <h2>Notre Processus de Travail</h2>
+    <div class="process-container">
+      <div class="process-step floating-3d">
+        <div class="process-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Idée & Conception</h3>
+        <p>Nous analysons vos besoins et concevons une solution sur mesure pour votre projet.</p>
+      </div>
+      <div class="process-step floating-3d">
+        <div class="process-icon">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <h3>Design</h3>
+        <p>Création de maquettes et prototypes pour valider l'expérience utilisateur.</p>
+      </div>
+      <div class="process-step floating-3d">
+        <div class="process-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Développement</h3>
+        <p>Implémentation technique avec les meilleures pratiques du marché.</p>
+      </div>
+      <div class="process-step floating-3d">
+        <div class="process-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Livraison</h3>
+        <p>Déploiement, formation et support continu pour assurer votre succès.</p>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="script.js">
-  </script>
+  <!-- Portfolio -->
+  <section id="portfolio" data-aos="fade-up">
+    <h2>Ils nous font confiance</h2>
+    <div class="clients-scroll-container">
+      <div class="clients-scroll">
+        <!-- Duplication des éléments pour créer un effet de défilement continu -->
+        <div class="client-item"><img src="images/AT.jpg" alt="ATTIEKE RUSSIE" ></div>
+        <div class="client-item"><img src="images/BZ.jpg" alt="BAZAR GIRL'S RUSSIE"></div>
+        <div class="client-item"><img src="images/DE.png" alt="DEL DORA COUTURE"></div>
+        <div class="client-item"><img src="images/DR.jpg" alt="LES DELICES DE RECKAT"></div>
+        <div class="client-item"><img src="images/E.jpg" alt="ELENGUI"></div>
+        <div class="client-item"><img src="images/G.jpg" alt="GORGEOUS HAIR STYLES"></div>
+        <div class="client-item"><img src="images/BM.jpg" alt="BM SERVICES"></div>
+        <div class="client-item"><img src="images/US.jpg" alt="URBAIN SNEAK"></div>
+        <div class="client-item"><img src="images/GB.png" alt="GBATA" ></div>
+        <div class="client-item"><img src="images/FDG.jpg" alt="FESTIVAL DES GRILLADES "></div>
+        <div class="client-item"><img src="images/KB.jpg" alt="KABRAN BUY MORE"></div>
+        <div class="client-item"><img src="images/NA.png" alt="NAILS HAVEN"></div>
+        <div class="client-item"><img src="images/NCS.png" alt="NOLD C S"></div>
+        <div class="client-item"><img src="images/S.jpg" alt="SAMATY GROUP"></div>
+        <div class="client-item"><img src="images/SA.png" alt=""></div>
+        <div class="client-item"><img src="images/ST.jpg" alt="SOMBA-TEKA"></div>
+        <div class="client-item"><img src="images/ZB.jpg" alt="THE ZANZIBAR LOUNGE"></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" data-aos="fade-up">
+    <h2>Nos Chiffres Clés</h2>
+    <div class="cards">
+      <div class="card floating-3d"><i class="fas fa-paint-brush"></i><strong>200+</strong><p>Projets de design réalisés</p></div>
+      <div class="card floating-3d"><i class="fas fa-bullhorn"></i><strong>20+</strong><p>Événements promus</p></div>
+      <div class="card floating-3d"><i class="fas fa-laptop-code"></i><strong>10+</strong><p>Projets IT déployés</p></div>
+      <div class="card floating-3d"><i class="fas fa-share-alt"></i><strong>10+</strong><p>Comptes sociaux managés</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contactez-nous</h2>
+    <p>Prêt à donner vie à votre projet ? Parlons-en dès aujourd'hui.</p>
+    <div class="contact-icons">
+      <a href="https://t.me/princeberg_smith" target="_blank" class="floating-3d"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/89604663774" target="_blank" class="floating-3d"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/magic_tech023" target="_blank" class="floating-3d"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Magic & Tech</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
