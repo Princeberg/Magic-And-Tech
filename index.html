@@ -3,320 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic & Tech - Startup</title>
+  <title>Magic & Tech</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
 </head>
 <body>
-  <!-- Canvas for background animation -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Header -->
+  <!-- Header (visible uniquement sur desktop) -->
   <header>
-    <a href="index.html" class="logo"><img src="images/logo2.png" width="100" alt="Logo"></a>
-    <nav>
+    <a href="index.html" class="logo">
+      <img src="images/logo2.png" alt="Magic & Tech Logo">
+    </a>
+    
+    <!-- Menu Desktop (visible sur grand écran) -->
+    <nav class="desktop-nav">
       <a href="#services">Services</a>
-      <a href="#process">Procéssus</a>
+      <a href="#process">Procédé</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#stats">Chiffres</a>
-      <a href="#contact">Contacts</a>
-      <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- Bouton Hamburger (visible uniquement sur mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Menu mobile">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Overlay pour mobile menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- Logo dans le menu mobile -->
+    <div class="mobile-logo">
+      <img src="images/logo2.png" alt="Magic & Tech Logo">
+    </div>
+    
+    <!-- Liens de navigation mobile -->
+    <div class="mobile-menu-content">
+      <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+      <a href="#process" class="mobile-nav-link" onclick="closeMobileMenu()">Procédé</a>
+      <a href="#portfolio" class="mobile-nav-link" onclick="closeMobileMenu()">Portfolio</a>
+      <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
+
   <!-- Hero -->
   <section class="hero" data-aos="fade-up">
-    <h1 class="floating-3d">Design. Communication. Tech.</h1>
-    <p>
-      Magic & Tech est une startup spécialisée en Graphic Design, Communication, IT Project et Social Media Marketing.  
-      Nous aidons les entreprises et particuliers à construire leur identité visuelle, développer leur présence digitale et réaliser leurs projets technologiques.
-    </p>
-    <a href="#contact" class="btn floating-3d">Demander un devis</a>
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Design. Communication. Web.</h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Startup spécialisée en Design graphique, Communication digitale, et Développement Web.  
+        Nous aidons les entreprises et particuliers à construire leur identité visuelle et développer leur présence digitale.
+      </p>
+      <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="200">Demander un devis</a>
+    </div>
   </section>
 
   <!-- Services -->
-  <section id="services" data-aos="fade-up">
-    <h2>Nos Services</h2>
-    <div class="cards">
-      <div class="card floating-3d"><i class="fas fa-paint-brush"></i><strong>Graphic Design</strong><p>Identités visuelles, logos, supports print & digitaux.</p></div>
-      <div class="card floating-3d"><i class="fas fa-bullhorn"></i><strong>Communication Digitale</strong><p>Stratégies et campagnes pour maximiser votre visibilité.</p></div>
-      <div class="card floating-3d"><i class="fas fa-laptop-code"></i><strong>IT Project & Support</strong><p>Sites web, PWA, automatisations et applications desktop.</p></div>
-      <div class="card floating-3d"><i class="fas fa-object-group"></i><strong>Web Design</strong><p>Interfaces modernes et intuitives pour une meilleure UX.</p></div>
-      <div class="card floating-3d"><i class="fas fa-share-alt"></i><strong>Social Media Marketing</strong><p>Gestion et optimisation de vos réseaux sociaux.</p></div>
+  <section id="services" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Nos Services</h2>
+      <div class="cards">
+        <div class="card" data-aos="fade-up">
+          <i class="fas fa-paint-brush"></i>
+          <strong>Design Graphique</strong>
+          <p>Branding, Flyers, Brochures, supports print & digitaux.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-bullhorn"></i>
+          <strong>Communication Digitale</strong>
+          <p>Stratégies et campagnes pour maximiser votre visibilité.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-laptop-code"></i>
+          <strong>IT Project & Support</strong>
+          <p>Développement Web, automatisations et applications desktop.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-object-group"></i>
+          <strong>Web Design</strong>
+          <p>Interfaces modernes et intuitives pour une meilleure UX.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Process Section -->
-  <section id="process" data-aos="fade-up">
-    <h2>Notre Processus de Travail</h2>
-    <div class="process-container">
-      <div class="process-step floating-3d">
-        <div class="process-icon">
-          <i class="fas fa-lightbulb"></i>
+  <section id="process" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Notre Procédé de Travail</h2>
+      <div class="process-container">
+        <div class="process-step" data-aos="fade-up">
+          <div class="process-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Idée & Conception</h3>
+          <p>Nous analysons vos besoins et concevons une solution sur mesure pour votre projet.</p>
         </div>
-        <h3>Idée & Conception</h3>
-        <p>Nous analysons vos besoins et concevons une solution sur mesure pour votre projet.</p>
-      </div>
-      <div class="process-step floating-3d">
-        <div class="process-icon">
-          <i class="fas fa-pencil-ruler"></i>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-icon">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <h3>Design</h3>
+          <p>Création de maquettes et prototypes pour valider l'expérience utilisateur.</p>
         </div>
-        <h3>Design</h3>
-        <p>Création de maquettes et prototypes pour valider l'expérience utilisateur.</p>
-      </div>
-      <div class="process-step floating-3d">
-        <div class="process-icon">
-          <i class="fas fa-code"></i>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Développement</h3>
+          <p>Implémentation technique avec les meilleures pratiques du marché.</p>
         </div>
-        <h3>Développement</h3>
-        <p>Implémentation technique avec les meilleures pratiques du marché.</p>
-      </div>
-      <div class="process-step floating-3d">
-        <div class="process-icon">
-          <i class="fas fa-rocket"></i>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Livraison</h3>
+          <p>Déploiement, formation et support continu pour assurer votre succès.</p>
         </div>
-        <h3>Livraison</h3>
-        <p>Déploiement, formation et support continu pour assurer votre succès.</p>
       </div>
     </div>
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="portfolio-section" data-aos="fade-up">
-    <div class="portfolio-container">
-      <h2>Portofolio</h2>
-      <p class="section-description" style="text-align: center; margin-bottom: 40px; color: white; max-width: 800px; margin-left: auto; margin-right: auto;">
-        Découvrez une sélection de nos meilleurs projets qui allient technologie et créativité.
-      </p>
+  <section id="portfolio" class="portfolio-section section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
       
-      <div class="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="web">Développement Web</button>
-        <button class="filter-btn" data-filter="design">Design Graphique</button>
-        <button class="filter-btn" data-filter="branding">Branding</button>
+      <div class="portfolio-grid" data-aos="fade-up">
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/portofolio.png" alt="Toutes nos réalisations" title="Portfolio complet">
+          </div>
+        </div>
       </div>
-      
-      <div class="portfolio-grid">
-        <div class="portfolio-item" data-category="web">
-          <div class="portfolio-image">
-            <img src="images/ST.jpg" alt="SOMBA-TEKA" title="SOMBA-TEKA">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3> SOMBA-TEKA </h3>
-                <p>Application Web Progressive de vente en ligne et pétite annonce au Congo-Brazzaville </p>
-                <div class="portfolio-links">
-                  <a href="https://somba-teka.netlify.app/" style="text-decoration: none;" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="portfolio-item" data-category="web">
-          <div class="portfolio-image">
-            <img src="images/lc.jpg" alt="Loge connect" title="loge connect">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3> Loge Connect </h3>
-                <p> Application Web de vente et location de logements au Congo-Brazzaville </p>
-                <div class="portfolio-links">
-                  <a href="https://logeconnect.netlify.app/" style="text-decoration: none;" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="portfolio-item" data-category="design">
-          <div class="portfolio-image">
-            <img src="images/S.jpg" alt="Identité Visuelle SAMATY Group" title="Identité Visuelle SAMATY Group">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3> Identité visuelle </h3>
-                <p>Logo, et éléments graphiques pour un agence de logistique et transport</p>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-         <div class="portfolio-item" data-category="design">
-          <div class="portfolio-image">
-            <img src="images/ZB.jpg" alt="Identité Visuelle THE ZANZIBAR LOUNGE" title="Identité Visuelle THE ZANZIBAR LOUNGE">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3> Identité visuelle </h3>
-                <p>Logo, menu et éléments graphiques pour un bar de nuit et restaurant</p>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="design">
-          <div class="portfolio-image">
-            <img src="images/SA.png" alt="Identité SA" title="Identité Visuelle" >
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3> Identité visuelle </h3>
-                <p>Logo, et éléments graphiques de l'événement </p>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/AT.jpg" alt="ATTIEKE RUSSIE" title="ATTIEKE RUSSIE">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Rebranding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-           <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/US.jpg" alt="URBAIN SNEAK" title="URBAIN SNEAK">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Branding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/DE.png" alt="DEL DORA COUTURE" title="DEL DORA COUTURE">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Branding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/E.jpg" alt="ELENGUI" title="ELENGUI">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Branding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-         <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/BZ.jpg" alt="BAZAR GIRL'S RUSSIE" title="BAZAR GIRL'S RUSSIE" >
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Branding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="branding">
-          <div class="portfolio-image">
-            <img src="images/BM.jpg" alt="BM SERVICES" title="BM SERVICES">
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <h3>Branding</h3>
-                <p>Refonte complète de l'identité visuelle de la marque</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-      </div>
-      
-      <div class="portfolio-stats">
+      <!-- STATS -->
+      <div class="portfolio-stats" data-aos="fade-up">
         <div class="stat-item">
-          <div class="stat-number" data-count="30">0</div>
+          <div class="stat-number" data-count="30">
+            <span class="count">0</span><span class="plus">+</span>
+          </div>
           <div class="stat-label">Projets réalisés</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-count="12">0</div>
+          <div class="stat-number" data-count="12">
+            <span class="count">0</span><span class="plus">+</span>
+          </div>
           <div class="stat-label">Collaborateurs</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-count="100">0</div>
+          <div class="stat-number" data-count="100">
+            <span class="count">0</span><span class="plus">+</span>
+          </div>
           <div class="stat-label">Clients satisfaits</div>
         </div>
       </div>
     </div>
   </section>
 
-
-<!-- CLIENTS -->
-  <section id="clients" data-aos="fade-up">
-    <h2>Ils nous font confiance</h2>
-    <div class="clients-scroll-container">
-      <div class="clients-scroll">
-        <!-- Duplication des éléments pour créer un effet de défilement continu -->
-        <div class="client-item"><img src="images/AT.jpg" alt="ATTIEKE RUSSIE" ></div>
-        <div class="client-item"><img src="images/BZ.jpg" alt="BAZAR GIRL'S RUSSIE"></div>
-        <div class="client-item"><img src="images/DE.png" alt="DEL DORA COUTURE"></div>
-        <div class="client-item"><img src="images/DR.jpg" alt="LES DELICES DE RECKAT"></div>
-        <div class="client-item"><img src="images/E.jpg" alt="ELENGUI"></div>
-        <div class="client-item"><img src="images/G.jpg" alt="GORGEOUS HAIR STYLES"></div>
-        <div class="client-item"><img src="images/BM.jpg" alt="BM SERVICES"></div>
-        <div class="client-item"><img src="images/US.jpg" alt="URBAIN SNEAK"></div>
-        <div class="client-item"><img src="images/GB.png" alt="GBATA" ></div>
-        <div class="client-item"><img src="images/FDG.jpg" alt="FESTIVAL DES GRILLADES "></div>
-        <div class="client-item"><img src="images/KB.jpg" alt="KABRAN BUY MORE"></div>
-        <div class="client-item"><img src="images/NA.png" alt="NAILS HAVEN"></div>
-        <div class="client-item"><img src="images/NCS.png" alt="NOLD C S"></div>
-        <div class="client-item"><img src="images/S.jpg" alt="SAMATY GROUP"></div>
-        <div class="client-item"><img src="images/SA.png" alt=""></div>
-        <div class="client-item"><img src="images/ST.jpg" alt="SOMBA-TEKA"></div>
-        <div class="client-item"><img src="images/ZB.jpg" alt="THE ZANZIBAR LOUNGE"></div>
-        
+  <!-- CLIENTS -->
+  <section id="clients" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Ils nous font confiance</h2>
+      <div class="clients-scroll-container" data-aos="fade-up">
+        <div class="clients-scroll">
+          <!-- Logos des clients -->
+          <div class="client-item"><img src="images/Logos/AT.jpg" alt="ATTIEKE RUSSIE"></div>
+          <div class="client-item"><img src="images/Logos/BZ.jpg" alt="BAZAR GIRL'S RUSSIE"></div>
+          <div class="client-item"><img src="images/Logos/DE.png" alt="DEL DORA COUTURE"></div>
+          <div class="client-item"><img src="images/Logos/DR.jpg" alt="LES DELICES DE RECKAT"></div>
+          <div class="client-item"><img src="images/Logos/E.jpg" alt="ELENGUI"></div>
+          <div class="client-item"><img src="images/Logos/G.jpg" alt="GORGEOUS HAIR STYLES"></div>
+          <div class="client-item"><img src="images/Logos/BM.jpg" alt="BM SERVICES"></div>
+          <div class="client-item"><img src="images/Logos/US.jpg" alt="URBAIN SNEAK"></div>
+          <div class="client-item"><img src="images/Logos/GB.png" alt="GBATA"></div>
+          <div class="client-item"><img src="images/Logos/FDG.jpg" alt="FESTIVAL DES GRILLADES"></div>
+          <div class="client-item"><img src="images/Logos/LAMIRA.png" alt="LA MIRA"></div>
+          <div class="client-item"><img src="images/Logos/KB.jpg" alt="KABRAN BUY MORE"></div>
+          <div class="client-item"><img src="images/Logos/NA.png" alt="NAILS HAVEN"></div>
+          <div class="client-item"><img src="images/Logos/S.jpg" alt="SAMATY GROUP"></div>
+          <div class="client-item"><img src="images/Logos/ST.jpg" alt="SOMBA-TEKA"></div>
+          <div class="client-item"><img src="images/Logos/LOGO_MK.png" alt="Les delices de MK"></div>
+          
+          <!-- Duplication pour effet de défilement continu -->
+          <div class="client-item"><img src="images/Logos/AT.jpg" alt="ATTIEKE RUSSIE"></div>
+          <div class="client-item"><img src="images/Logos/BZ.jpg" alt="BAZAR GIRL'S RUSSIE"></div>
+          <div class="client-item"><img src="images/Logos/DE.png" alt="DEL DORA COUTURE"></div>
+          <div class="client-item"><img src="images/Logos/DR.jpg" alt="LES DELICES DE RECKAT"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section id="stats" data-aos="fade-up">
-    <h2>Nos Chiffres Clés</h2>
-    <div class="cards">
-      <div class="card floating-3d"><i class="fas fa-paint-brush"></i><strong>200+</strong><p>Projets de design réalisés</p></div>
-      <div class="card floating-3d"><i class="fas fa-bullhorn"></i><strong>20+</strong><p>Événements promus</p></div>
-      <div class="card floating-3d"><i class="fas fa-laptop-code"></i><strong>10+</strong><p>Projets IT déployés</p></div>
-      <div class="card floating-3d"><i class="fas fa-share-alt"></i><strong>10+</strong><p>Comptes sociaux managés</p></div>
-    </div>
-  </section>
-
   <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Contactez-nous</h2>
-    <p>Prêt à donner vie à votre projet ? Parlons-en dès aujourd'hui.</p>
-    <div class="contact-icons">
-      <a href="https://t.me/princeberg_smith" target="_blank" class="floating-3d"><i class="fab fa-telegram"></i></a>
-      <a href="https://wa.me/89604663774" target="_blank" class="floating-3d"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/magic_tech023" target="_blank" class="floating-3d"><i class="fab fa-instagram"></i></a>
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Contactez-nous</h2>
+      <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+        Prêt à donner vie à votre projet ? Parlons-en dès aujourd'hui.
+      </p>
+      <div class="contact-icons" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://t.me/princeberg_smith" target="_blank" class="contact-icon" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://wa.me/89604663774" target="_blank" class="contact-icon" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/magic_tech023" target="_blank" class="contact-icon" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>&copy; 2025 Magic & Tech</footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Magic & Tech. Tous droits réservés.</p>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
